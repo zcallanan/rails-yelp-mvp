@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Restaurants</h1>
+  <div class="row">
+    <div class="col-4">
+      <ul class="list-group">
+      <% @restaurants.each do |restaurant| %>
+        <li class="list-group-item d-flex justify-content-between"><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none"  %><button class="btn btn-secondary"><%= link_to "Add a review", new_restaurant_review_path(restaurant), class: "text-decoration-none text-white"  %></button></li>
+      <% end %>
+      </ul>
+      <button class="btn btn-primary"><%= link_to 'Add a restaurant', new_restaurant_path, class: "text-white text-decoration-none" %></button>
+    </div>
+
+  </div>
+
+</div>
